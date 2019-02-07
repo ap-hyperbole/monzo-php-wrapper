@@ -9,20 +9,23 @@ https://monzo.com/blog/2017/05/11/api-update/
 # Usage
 
 1. Navigate to https://developers.monzo.com, then to the "Clients" section and create a new OAuth Client with the following settings
+```
   a. Confidentiality = Confidential
   b. Redirect URL : http://127.0.0.1/
   c. Name : MyApp
   d. Description : MyApp
-
+```
 2. From the newly created OAuth client page take a note of the following details :
+```
   a. Client ID
   b. Client secret
   c. Redirect URLs
-
+```
 3. When using this class set
+```
   a. $bank = new UK_Monzo("Account number", "Client ID", "Client secret", "Redirect URLs");
   b. By default, transactions from the past 4 hours will be returned. You can adjust this using TX_SINCE in the class. 
-
+```
   Where "Account number" is your Monzo Bank account numner Example `11111111`
   Other settings are from the OAuth client page, see step 2.
 
